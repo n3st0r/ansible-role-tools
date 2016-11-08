@@ -1,9 +1,14 @@
 
 ---
 common_tools:
-    - htop
-    - lsof
-    - multitail
+  - bmon
+  - ethtool
+  - fping
+  - htop
+  - less
+  - lsof
+  - multitail
+  - vim-nox
+  - xz-utils
 
 ...
-
