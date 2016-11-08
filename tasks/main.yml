@@ -1,12 +1,14 @@
 
 ---
 
+- name: Load the OS specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+  tags: ['packages']
+
 - name: Installation and configuration of useful tools and programs
-  apt: pkg={{ item }} state=latest
-  with_items:
-      - htop
-      - lsof
-      - multitail
+  apt: state=latest pkg={{ item }}
+  with_items: "{{ common_tools }}"
+  when: ansible_os_family == 'Debian'
   tags: ['packages']
 
 - name: Install vim editor

@@ -1,0 +1,9 @@
+
+---
+common_tools:
+    - htop
+    - lsof
+    - multitail
+
+...
+
