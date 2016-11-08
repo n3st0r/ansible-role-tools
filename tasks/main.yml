@@ -1,0 +1,8 @@
+
+---
+
+- name: Installation and configuration of useful tools and programs
+  apt: pkg={{ item }} state=latest
+  with_items:
+      - htop
+
