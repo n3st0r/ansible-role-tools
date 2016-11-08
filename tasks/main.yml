@@ -7,4 +7,14 @@
       - htop
       - lsof
       - multitail
+  tags: ['packages']
+
+- name: Install vim editor
+  apt: pkg={{ item }} state=latest
+  with_items:
+      - vim-nox
+  tags: ['packages']
+
+- name: Create customized vim configuration file
+  copy: src=vimrc.local dest=/etc/vim/vimrc.local
 
