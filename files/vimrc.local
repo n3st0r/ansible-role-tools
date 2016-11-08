@@ -1,0 +1,26 @@
+set nocompatible
+syntax on
+set background=dark
+if has("autocmd")
+ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+if has("autocmd")
+ filetype plugin indent on "
+endif
+
+set tabstop=4
+set shiftwidth=4
+set expandtab "use space instead tabs
+set softtabstop=0 "Count N space when use DELETE or BACKSPACE
+set showcmd
+set showmatch
+set ignorecase
+set smartcase
+set incsearch
+set autowrite
+set hidden
+set backspace=indent,eol,start  "BACKSPACE in insert
+set visualbell  "Don't BIP, only flashes
+
+set mouse=
+
